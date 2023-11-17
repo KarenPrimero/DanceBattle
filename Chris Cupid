@@ -1,0 +1,69 @@
+    
+    def _gopigo3_command_dance(self):
+        print("DANCE OFF!")
+        b= 60/120
+        x = 1
+        
+        #START
+        while x == 1:
+            self.gopigo3.open_eyes()
+            self.left_eye_on = self.right_eye_on = True
+            self.gopigo3.right()
+            sleep(2*b)
+            self.gopigo3.forward()
+            sleep(2*b)
+            self.gopigo3.left()
+            sleep(2*b)
+            self.gopigo3.forward()
+            sleep(2*b)
+            self.gopigo3.right()
+            sleep(16*b)
+        
+            #U Turn
+            self.gopigo3.steer(100, 20)
+            current_speed = 1000
+            end_speed = 2000
+            self.gopigo3.set_speed(end_speed)
+            sleep (8*b)
+
+            #DIES
+            self.gopigo3.stop()
+            self.gopigo3.close_eyes()
+            self.left_eye_on = self.right_eye_on = False
+            sleep(18*b)
+
+        
+            #slowspeedup
+            #movesbb
+            self.gopigo3.forward()
+            sleep(8*b)
+            self.gopigo3.stop()
+            sleep(7*b)
+            self.gopigo3.open_eyes()
+            self.left_eye_on = self.right_eye_on = True
+            x = x + 1
+            
+      
+        while x == 2:
+            self.gopigo3.right()
+            sleep(2*b)
+            self.gopigo3.backward()
+            sleep(2*b)
+            self.gopigo3.left()
+            sleep(2*b)
+            self.gopigo3.backward()
+            sleep(2*b)
+            self.gopigo3.right()
+            sleep(16*b)
+            x = x + 1
+    
+        while x == 3:
+            self.gopigo3.stop()
+            x = x + 1
+            
+        while x < 5:
+            self.gopigo3.forward()
+            self.gopigo3.spin_right()
+            self.gopigo3.stop
+            sleep(2*b)
+            x = x + 1
