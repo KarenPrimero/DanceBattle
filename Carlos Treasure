@@ -1,0 +1,175 @@
+    def _gopigo3_command_FirstPart(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0 
+        self.gopigo3.open_eyes()
+        self.left_eye_on = self.right_eye_on = True
+        self.gopigo3.set_speed (400)
+        self.gopigo3.forward()
+        sleep(2)
+        
+        while x < 1:
+            self.gopigo3.steer(20,100)
+            sleep(4)
+            x = x + 1
+            
+        self.gopigo3.stop() 
+        
+ 
+        
+    def _gopigo3_command_sec24(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0 
+        self.gopigo3.set_speed (400)
+        self.gopigo3.forward()
+        sleep(2)
+        
+        self.gopigo3.stop()
+        
+    def _gopigo3_command_sec8(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0
+        while x < 4:
+            self.gopigo3.set_speed (600)
+            self.gopigo3.forward()
+            sleep(0.22)
+            self.gopigo3.stop()
+            sleep(0.22)
+            x = x + 1
+
+        self.gopigo3.stop()
+        
+    
+    def _gopigo3_command_sec16(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0
+        while x < 1:
+            self.gopigo3.steer(20,100)
+            sleep (2.5)
+            x = x + 1
+            
+        self.gopigo3.stop() 
+        
+    
+    def _gopigo3_command_sec20(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0
+        while x < 6:
+            self.gopigo3.set_speed (600)
+            self.gopigo3.forward()
+            sleep(0.22)
+            self.gopigo3.stop()
+            sleep(0.11)
+            self.gopigo3.backward()
+            sleep(0.11)
+            self.gopigo3.stop()
+            x = x + 1
+
+        self.gopigo3.stop()     
+        
+    def _gopigo3_command_sec28(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0
+        while x < 1:
+            self.gopigo3.steer(100,20)
+            sleep (2)
+            x = x + 1
+            
+        self.gopigo3.stop()  
+        
+    def _gopigo3_command_sec32(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0
+        while x < 1:
+            self.gopigo3.steer(100,-100)
+            sleep (1)
+            x = x + 1
+        
+        self.gopigo3.stop()  
+    
+    def _gopigo3_command_Secondpart(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0 
+        self.gopigo3.set_speed (400)
+        self.gopigo3.forward()
+        sleep(1)
+        
+        while x < 2:
+            self.gopigo3.set_speed (600)
+            self.gopigo3.forward()
+            sleep(0.2)
+            self.gopigo3.stop()
+            sleep(0.2)
+            x = x + 1
+        
+        self.gopigo3.stop()
+    
+    def _gopigo3_command_BeatDrop(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0 
+        self.gopigo3.set_speed (400)
+        self.gopigo3.forward()
+        sleep(2.2)
+        
+        while x < 1:
+            self.gopigo3.steer(-100,100)
+            sleep (1)
+            x = x + 1
+        
+        self.gopigo3.stop()  
+    
+    def _gopigo3_command_Continue(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0 
+        
+        while x < 3:
+            self.gopigo3.set_speed (600)
+            self.gopigo3.forward()
+            sleep(0.2)
+            self.gopigo3.stop()
+            sleep(0.2)
+            x = x + 1
+        
+        self.gopigo3.stop()
+    
+    def _gopigo3_command_BeatDrop2(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        self.gopigo3.steer(100,-100)
+        sleep(2)
+        
+        self.gopigo3.stop()
+        
+    def _gopigo3_command_MiddleWay(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0 
+        self.gopigo3.set_speed (400)
+        self.gopigo3.forward()
+        sleep(2)
+        
+        while x < 1:
+            self.gopigo3.steer(100,20)
+            sleep(5)
+            x = x + 1
+            
+        self.gopigo3.stop() 
+        
+    def _gopigo3_command_MiddleFinish(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        x = 0 
+        self.gopigo3.set_speed (400)
+        self.gopigo3.forward()
+        sleep(1)
+        
+        while x < 1:
+            self.gopigo3.steer(20,100)
+            sleep(4)
+            x = x + 1
+            
+        self.gopigo3.stop() 
+    
+    def _gopigo3_command_End(self):
+        b = 60/116 #each beat is aprrox .51 seconds
+        self.gopigo3.steer(100,-100)
+        sleep(4)
+        
+        self.gopigo3.stop()
+    
