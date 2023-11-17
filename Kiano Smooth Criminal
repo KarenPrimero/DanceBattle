@@ -1,0 +1,111 @@
+def _gopigo3_command_dance(self):
+        beat = 60/117
+        x = 100 
+        z=1
+        x=1
+        w=1
+        k = 1
+        self.gopigo3.set_speed(300)
+        self.gopigo3.steer(25,20)
+        sleep(beat*4)
+        while z < 4: 
+            self.gopigo3.steer(20,50)
+            sleep(beat*4)
+            self.gopigo3.steer(50,20)
+            sleep(beat*4)
+            z = z+1
+        self.gopigo3.steer(20,25)
+        sleep(beat*4)
+        self.gopigo3.backward()
+        while x < 400:
+            print(x)
+            self.gopigo3.set_speed(x)
+            sleep(beat*0.5)
+            x = x + 100
+        x = 100
+        sleep(beat*5.5)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.backward()
+        while x < 400:
+            print(x)
+            self.gopigo3.set_speed(x)
+            sleep(beat*0.5)
+            x = x + 100
+        x = 100
+        sleep(beat*5.5)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.backward()
+        while x < 400:
+            print(x)
+            self.gopigo3.set_speed(x)
+            sleep(beat*0.5)
+            x = x + 100
+        sleep(beat*5.5)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.steer(5.5,-100)
+        sleep(beat*7)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.steer(100,100)
+        sleep(beat*2)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.steer(-25,-25)
+        sleep(beat*2)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.steer(100,100)
+        sleep(beat*4)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.steer(-25,-25)
+        sleep(beat*2)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.steer(100,100)
+        sleep(beat*4)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.steer(-25,-25)
+        sleep(beat*2)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.steer(100,100)
+        sleep(beat*1)
+        self.gopigo3.spin_left()
+        sleep(beat*8)
+        self.gopigo3.stop()
+        sleep(beat)
+        
+        while w < 9:
+            self.gopigo3.steer(100,0)
+            sleep(beat)
+            self.gopigo3.stop()
+            sleep(beat)
+            w = w+1
+            
+        while k < 9:
+            self.gopigo3.steer(0,100)
+            sleep(beat)
+            self.gopigo3.stop()
+            sleep(beat)
+            k = k + 1
+        
+        
+        self.gopigo3.steer(20,35)
+        sleep(beat*4)
+        self.gopigo3.steer(35,20)
+        sleep(beat*8)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.steer(-35,-20)
+        sleep(beat*8)
+        self.gopigo3.stop()
+        sleep(beat)
+        self.gopigo3.steer(15,0)
+        sleep(beat*4)
+        self.gopigo3.stop()
+        sleep(beat)
