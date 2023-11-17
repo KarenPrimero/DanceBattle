@@ -1,0 +1,105 @@
+    def _gopigo3_command_ShBoom(self): # the bpm is 137
+        self.gopigo3.set_speed(950)
+        b = 60/137
+    
+        #first 8 seconds
+        self.gopigo3.steer(20, 100)
+        sleep(2*b)
+        self.gopigo3.steer(100, 20)
+        sleep(2*b)
+        self.gopigo3.steer(20, 100)
+        sleep(2*b)
+        self.gopigo3.steer(100, 20)
+        sleep(2*b)
+        self.gopigo3.steer(100, 25)
+        sleep(4*b)
+        self.gopigo3.forward()
+        sleep(3.5*b)
+        
+        #shboom part
+        self.gopigo3.steer(0, 100)
+        sleep(2.5*b)
+        
+        #heart
+        self.gopigo3.forward()
+        sleep(4*b)
+        self.gopigo3.steer(100, 25)
+        sleep(10*b)
+        self.gopigo3.steer(100, 24)
+        sleep(3*b)
+        
+        #hello, hello again
+        self.gopigo3.set_speed(1000)
+        self.gopigo3.forward()
+        sleep (6*b)
+        self.gopigo3.spin_left()
+        sleep(1.6*b)
+        self.gopigo3.spin_right()
+        sleep(1.6*b)
+        self. gopigo3.stop()
+        sleep(2.5*b)
+        
+        #backsway
+        self.gopigo3.steer (-25, -100)
+        sleep (6*b)
+        self.gopigo3.backward()
+        sleep (2*b)
+        self.gopigo3.forward()
+        sleep (2.5*b)
+        self.gopigo3.steer(10, 100)
+        sleep(2*b)
+        self.gopigo3.steer(100, 10)
+        sleep(4*b)
+        self.gopigo3.steer(10, 100)
+        sleep(4*b)
+        self.gopigo3.steer(100, 10)
+        sleep(4*b)
+        self.gopigo3.steer(-100, -10)
+        sleep(4*b)
+        self.gopigo3.steer(-10, -100)
+        sleep(4*b)
+        self.gopigo3.steer(-100, -10)
+        sleep(4*b)
+        self.gopigo3.steer(-10, -100)
+        sleep(4*b)
+        self.gopigo3.steer(-100, -10)
+        sleep(4*b)
+        
+        #butt shimmy ending
+        x = 0
+        
+        while x <= 7:
+            self.gopigo3.spin_right()
+            sleep(0.5*b)
+            self.gopigo3.spin_left()
+            sleep(0.5*b)
+            x = x + 1
+        
+        self.gopigo3.backward()
+        sleep (0.5*b)
+        
+        x = 0
+        while x <= 7:
+            self.gopigo3.spin_right()
+            sleep(0.5*b)
+            self.gopigo3.spin_left()
+            sleep(0.5*b)
+            x = x + 1
+            
+        self.gopigo3.backward()
+        sleep (0.5*b)
+        
+        x = 0
+        while x <= 7:
+            self.gopigo3.spin_right()
+            sleep(0.5*b)
+            self.gopigo3.spin_left()
+            sleep(0.5*b)
+            x = x + 1
+            
+        self.gopigo3.spin_right()
+        sleep(10*b)
+        self.gopigo3.spin_left()
+        sleep(10*b)
+        
+        self. gopigo3.stop()
